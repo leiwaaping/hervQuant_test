@@ -22,7 +22,7 @@ STAR ,samtools and Salmon also can install by conda,Environment configuration pr
 ### STAR ###
 
 ```
-1.build STAR reference STAR
+# 1.build STAR reference STAR
 $ STAR --runMode genomeGenerate --runThreadN 6 --limitGenomeGenerateRAM 53667544448 --genomeSAindexNbases 7 --genomeDir . --genomeFastaFiles hervquant_hg19_reference.fa
 Apr 23 10:53:05 ..... started STAR run
 Apr 23 10:53:05 ... starting to generate Genome files
@@ -40,15 +40,30 @@ Apr 23 10:58:52 ..... finished successfully
  --runMode selsct running mode  
  --runThreadN how many CPU you want to use  
  --limitGenomeGenerateRAM ? normally it will remind you which number you should set if your parameter is too small  
- --genomeDir output directory  
+ --genomeDir  dictionary with reference files  
  --genomeFastaFiles reference file  
    
    
-   2. download SRA file and extract paired-end fastq file  
-   if it says "fastq-dump timeout",please try command below to split PE fastq into 2 file.
-   ```
-   fastq-dump --split-3 /path_to/SRR998480.sra
-   ```
-     
-     
+2. download SRA file and extract paired-end fastq file  
+if it says "fastq-dump timeout",please try command below to split PE fastq into 2 file.
+```
+fastq-dump --split-3 /path/to/.sra file/
+```
+
+```
+# 3. #align reads to reference STAR
+$ STAR --runThreadN 6 --outFileNamePrefix test --outFilterMultimapNmax 10 --outFilterMismatchNmax 7 --genomeDir . --readFilesIn /path/to/SRR2989969_1.fastq /path/to/SRR2989969_2.fastq
+Apr 23 14:11:05 ..... started STAR run
+Apr 23 14:11:05 ..... loading genome
+Apr 23 14:11:16 ..... started mapping
+Apr 23 14:18:23 ..... finished mapping
+Apr 23 14:18:24 ..... finished successfully
+```
+  --outFileNamePrefix    output prefix  
+  --outFilterMultimapNmax    最多允许一个reads被匹配到多少个地方  
+  --outFilterMismatchNmax    过滤掉每个paired read mismatch数目超过N的数据，999代表着忽略这个过滤  
+  --readFilesIn    input fastq files  
+
+
+  
    
