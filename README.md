@@ -97,6 +97,7 @@ $ samtools view -bS testAligned.out.filtered.sam > testAligned.out.filtered.bam
 
 #### assemble reads ####
 ```
+$ mkdir herv    #m make an output dir first
 $ salmon quant -t hervquant_final_reference.fa -l ISF -a testAligned.out.filtered.bam -o herv -p 6
 Version Info: This is the most recent version of salmon.
 # salmon (alignment-based) v0.13.1
@@ -153,4 +154,44 @@ Emptied Alignment Group Queue. . . done
 
 #### DONE! ####
 
+the output in herv directory is :
+```
+4096 4月  23 14:41 aux_info/
+221 4月  23 14:41 cmd_info.json
+4096 4月  23 14:41 libParams/
+4096 4月  23 14:41 logs/
+191128 4月  23 14:41 quant.sf
+```  
 
+Json file to recode command
+{
+    "salmon_version": "0.13.1",
+    "targets": "hervquant_final_reference.fa",
+    "libType": "ISF",
+    "alignments": "testAligned.out.filtered.bam",
+    "output": "herv",
+    "threads": "6",
+    "auxDir": "aux_info"
+}
+
+quant.sf marks the result
+```
+Name    Length  EffectiveLength TPM     NumReads
+3301_chr10:81864457-81875930    11474   11265.760       315.635193      62.911
+5149_chrY:19061760-19071747     9988    9779.760        419.797963      72.635
+2568_chr7:94971158-94981747     10590   10381.760       73.896307       13.573
+1313_chr4:9640061-9648771       8711    8502.760        285.844060      43.000
+5574_chrX:89945833-89961479     15647   15438.760       59.322626       16.204
+5234_chrY:25083151-25090545     7395    7186.760        0.000003        0.000
+3820_chr12:63704115-63712689    8575    8366.760        54.044725       8.000
+1641_chr4:142859323-142861993   2671    2462.760        0.000000        0.000
+4846_chr20:44211312-44217224    5913    5704.760        230.401251      23.254
+1061_chr3:111242241-111249760   7520    7311.760        195.483916      25.288
+1885_chr5:76205053-76208801     3749    3540.760        48.738933       3.053
+1205_chr3:163409748-163416770   7023    6814.760        16.588231       2.000
+4126_chr14:43470888-43478536    7649    7440.760        37.981608       5.000
+5036_chrY:6005031-6012488       7458    7249.760        0.000001        0.000
+5031_chrY:5190096-5198468       8373    8164.760        7.865320        1.136
+2970_chr8:138295368-138299167   3800    3591.760        236.050334      15.000
+……  
+···
