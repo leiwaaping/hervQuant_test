@@ -95,7 +95,7 @@ $ sed '/uc.*/d' testAligned.out.sam > testAligned.out.filtered.sam
 $ samtools view -bS testAligned.out.filtered.sam > testAligned.out.filtered.bam
 ```
 
-#### assemble reads ####
+#### 5. assemble reads ####
 ```
 $ mkdir herv    #m make an output dir first
 $ salmon quant -t hervquant_final_reference.fa -l ISF -a testAligned.out.filtered.bam -o herv -p 6
@@ -163,16 +163,17 @@ the output in herv directory is :
 191128 4月  23 14:41 quant.sf
 ```  
 
-Json file to recode command
-{
-    "salmon_version": "0.13.1",
-    "targets": "hervquant_final_reference.fa",
-    "libType": "ISF",
-    "alignments": "testAligned.out.filtered.bam",
-    "output": "herv",
-    "threads": "6",
-    "auxDir": "aux_info"
-}
+Json file to recode command  
+{  
+    "salmon_version": "0.13.1",  
+    "targets": "hervquant_final_reference.fa",  
+    "libType": "ISF",  
+    "alignments": "testAligned.out.filtered.bam",  
+    "output": "herv",  
+    "threads": "6",  
+    "auxDir": "aux_info"  
+}  
+
 
 quant.sf marks the result
 ```
