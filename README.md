@@ -41,4 +41,14 @@ Apr 23 10:58:52 ..... finished successfully
  --runThreadN how many CPU you want to use  
  --limitGenomeGenerateRAM ? normally it will remind you which number you should set if your parameter is too small  
  --genomeDir output directory  
- --genomeFastaFiles reference file
+ --genomeFastaFiles reference file  
+   
+   
+   2. download SRA file and extract paired-end fastq file  
+   if it says "fastq-dump timeout",please try command below to split PE fastq into 2 file.
+   ```
+   fastq-dump --split-3 /path_to/SRR998480.sra
+   ```
+     
+     
+   
