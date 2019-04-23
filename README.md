@@ -1,6 +1,6 @@
 # hervQuant_test
 
-## Notices ! All this data were from paper ***Endogenous retroviral signatures predict immunotherapy response in clear cell renal cell carcinoma*** https://www.jci.org/articles/view/121476 This article is for reference only ##
+## Notices ! All those guide were from paper ***Endogenous retroviral signatures predict immunotherapy response in clear cell renal cell carcinoma*** https://www.jci.org/articles/view/121476 This page for reference only ##
 
 
 
