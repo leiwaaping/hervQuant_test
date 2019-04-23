@@ -37,8 +37,8 @@ Apr 23 10:58:51 ... writing Suffix Array to disk ...
 Apr 23 10:58:52 ... writing SAindex to disk
 Apr 23 10:58:52 ..... finished successfully
 ```
- --runMode selsct running mode
- --runThreadN how many CPU you want to use
- --limitGenomeGenerateRAM ? normally it will remind you which number you should set if your parameter is too small
- --genomeDir output directory
+ --runMode selsct running mode  
+ --runThreadN how many CPU you want to use  
+ --limitGenomeGenerateRAM ? normally it will remind you which number you should set if your parameter is too small  
+ --genomeDir output directory  
  --genomeFastaFiles reference file
