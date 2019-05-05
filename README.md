@@ -13,11 +13,11 @@ Human endogenous retroviruses (hERVs) are remnants of exogenous retroviruses tha
 - STAR v2.5.3a (https://github.com/alexdobin/STAR/archive/2.5.3a.tar.gz) 
 - Salmon v0.8.2 (https://github.com/COMBINE-lab/salmon/archive/v0.8.2.tar.gz) 
 - Samtools v1.4 (https://github.com/samtools/samtools/releases/download/1.4/samtools-1.4.tar.bz2) 
-- RV reference sequences adapted from Vargiu, L. et al. (2016). 
-- rvQuant reference with transcriptome (“hervquant_hg19_reference.fa”,download from https://unclineberger.org/files/2018/12/hervquant_hg19_reference.fa_.zip) 
-- rvQuant reference (“hervquant_final_reference.fa”,attached)
+- HERV reference sequences adapted from Vargiu, L. et al. (2016). 
+- hervQuant reference with transcriptome (“hervquant_hg19_reference.fa”,download from https://unclineberger.org/files/2018/12/hervquant_hg19_reference.fa_.zip) 
+- hervQuant reference (“hervquant_final_reference.fa”,attached)
 
-STAR ,samtools and Salmon also can install by conda,Environment configuration process is omitted，please see ***INSTRUCTION***
+STAR ,samtools and Salmon also can be installed by conda,Environment configuration process is omitted，please see ***INSTRUCTION***
 
 ### STAR ###
 
