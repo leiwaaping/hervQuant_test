@@ -47,7 +47,7 @@ Apr 23 10:58:52 ..... finished successfully
 #### 2. download SRA file and extract paired-end fastq file ####  
 if it says "fastq-dump timeout",please try command below to split PE fastq into 2 file.
 ```
-fastq-dump --split-3 /path/to/.sra file/
+fastq-dump --split-3 /path/to/sra_file/
 ```
 
 #### 3. align reads to reference STAR ####
