@@ -18,6 +18,7 @@ Human endogenous retroviruses (hERVs) are remnants of exogenous retroviruses tha
 - hervQuant reference (“hervquant_final_reference.fa”,attached)
 
 STAR ,samtools and Salmon also can be installed by conda,Environment configuration process is omitted，please see ***INSTRUCTION***
+**notice! difference version of software can still works well,but may lead to difference output**
 
 ### STAR ###
 
@@ -88,6 +89,45 @@ Apr 23 14:18:24 ..... finished successfully
          954 4月  23 14:18 testLog.progress.out
       238741 4月  23 14:18 testSJ.out.ta  
 ```
+   testLog.final.out marks info of sample file,total reads (with unmapped) can be found here
+ 
+```
+$cat *.Log.final.out
+                                 Started job on |	May 07 09:07:29
+                             Started mapping on |	May 07 09:07:49
+                                    Finished on |	May 07 09:14:21
+       Mapping speed, Million of reads per hour |	726.12
+
+                          Number of input reads |	79066063
+                      Average input read length |	96
+                                    UNIQUE READS:
+                   Uniquely mapped reads number |	4346643
+                        Uniquely mapped reads % |	5.50%
+                          Average mapped length |	95.03
+                       Number of splices: Total |	5825
+            Number of splices: Annotated (sjdb) |	0
+                       Number of splices: GT/AG |	3136
+                       Number of splices: GC/AG |	276
+                       Number of splices: AT/AC |	19
+               Number of splices: Non-canonical |	2394
+                      Mismatch rate per base, % |	0.39%
+                         Deletion rate per base |	0.01%
+                        Deletion average length |	1.45
+                        Insertion rate per base |	0.01%
+                       Insertion average length |	1.37
+                             MULTI-MAPPING READS:
+        Number of reads mapped to multiple loci |	10990565
+             % of reads mapped to multiple loci |	13.90%
+        Number of reads mapped to too many loci |	384458
+             % of reads mapped to too many loci |	0.49%
+                                  UNMAPPED READS:
+       % of reads unmapped: too many mismatches |	0.00%
+                 % of reads unmapped: too short |	80.08%
+                     % of reads unmapped: other |	0.03%
+                                  CHIMERIC READS:
+                       Number of chimeric reads |	0
+                            % of chimeric reads |	0.00
+  ```
    
 #### 4.filter out all non-herv maps ####
 ```
@@ -196,3 +236,4 @@ Name    Length  EffectiveLength TPM     NumReads
 2970_chr8:138295368-138299167   3800    3591.760        236.050334      15.000
 ……  
 ···
+
